@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiross Passos com o DOM</title>
+    <style>
+        body{
+            background-color: rgb(22, 170, 207);
+            color:white;
+            font: normal 1.2em arial;
+        }
+        header{
+            padding: 50px;
+        }
+        header:hover{
+            background-color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <header> cabealho</header>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em Javascript</p>
+    <div id="botao">Clique em mim</div>
+    <div name="msg" >OIEEE</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('P')[1]  // Posição 0 é a 1° tag <p>, Posição 1 é a 2° tag <p> ...
+        var div = window.document.getElementById('botao')
+        div.innerText = 'Estou Aguardando ...'
+        var caixa = window.document.getElementsByName('msg')[0]
+        caixa.innerText = 'ENVIO EFETUADO'
+        var cabeca = window.document.querySelector(hover)
+        //  window.alert(p1.innerText)
+        window.document.write('Está escrito assim: ' + p1.innerHTML)
+             
+        // A Propriedade INNERTEXT serve para DEFINIR ou RETORNAR o CONTEÚDO de TEXTO de um ELEMENTO
+        // A Propriedade INNERHTML serve para DEFINIR o RETORNAR o CONTEÚDO de HTML (texto + formatação) de um ELEMENTO
+        cabeca.style.textAlign = 'center'
+
+
+        caixa.style.textAlign = 'center'
+        caixa.style.background = 'orange'
+        div.style.background = 'black'
+        div.style.textAlign = 'center'
+        corpo.style.background = 'brown'
+        p1.style.color = 'blue'
+    </script>
+</body>
+</html>

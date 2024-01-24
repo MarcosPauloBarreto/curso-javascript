@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body {
+            font: normal 1.5em arial;
+        }
+
+        input {
+            font: normal 1.1em arial;
+            width: 150px;
+        }
+
+        #res {
+            margin: 10px 10px 10px 10px;
+        }
+
+        #ibut {
+            padding: 10px;
+            margin: 20px 0px 0px 30px;
+            color: black;
+
+        }
+
+        #ibut>a {
+            text-decoration: none;
+            color: black;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Somando valores </h1>
+    <input type="number" name="txtn1" id="txtn1" placeholder="0" required min="1">
+    <input type="number" name="txtn2" id="txtn2" placeholder="0" required min="1">
+
+    <input type="button" value="Somar" onclick="somar()">
+    <output id="res" name="soma">Aqui está a Soma do valor entre:</output>
+    <!-- Ou pode-se colocar uma div para aparecer o resultado,mas utiliza-se o OUTPUT com uma saída e
+    PRECISA estar LIGADA a um SCRIPT,com o resultado gerado pelo SCRIPT deve ser renderizado pelo elemento OUTPUT/SAÍDA. -->
+
+    <button id="ibut" name="ibut" onclick="link()"><a href="ex007.html" id="ilink">acesse aqui</a></button>
+</body>
+<script>
+    var butao = window.document.getElementById('ibut')
+    var link = window.document.getElementById('ilink')
+
+    butao.addEventListener('mouseenter', entrar)
+    butao.addEventListener('mouseout', sair)
+    butao.addEventListener('click', clicar)
+    link.addEventListener('mouseenter', entrar)
+    link.addEventListener('mouseout', sair)
+
+    function clicar() {
+        butao.style.background = ' aquamarine'
+        
+    }
+    function entrar() {
+
+        butao.style.background = 'black'
+        link.style.color = 'white'
+    }
+    function sair() {
+        butao.style.background = 'white'
+        link.style.color = 'black'
+    }
+
+
+    function somar() {
+        var tn1 = window.document.querySelector('input#txtn1')
+        //ou Pode usar o query selector tambem
+        var tn2 = window.document.querySelector('input#txtn2')
+        var res = window.document.getElementById('res')
+
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+
+        var s = n1 + n2
+
+        res.innerHTML = `Aqui está a Soma do valor entre: ${n1} + ${n2} =<strong> ${s}</strong>`
+    }
+</script>
+
+</html>
