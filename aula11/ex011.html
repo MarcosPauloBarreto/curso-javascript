@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 1.5em;
+            font-family: arial;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sistemas de países</h1>
+    <p>
+        Coloque o seu País <input type="text" id="paises" name="paises" autocomplete="off">
+
+    </p>
+    <input type="button" value="Verificar" onclick="pesquisa() ">
+    <div id="res">
+
+    </div>
+    <script>
+
+        function pesquisa() {
+            var país = window.document.getElementById('paises')
+            var p = país.value
+            var r = window.document.getElementById('res')
+            if ( p == 'Brasil','brasil' ) {
+                r.innerHTML = 'Você é Brasileiro!'
+            }
+            else {
+                r.innerHTML = 'Você é Estrangeiro!'
+            }
+
+        }
+    </script>
+</body>
+
+</html>
