@@ -26,7 +26,7 @@ switch (diaSem) {
   case 4:
     console.log("Quinta")
     break
-  case 5:
+    case 5:
     console.log("Sexta")
     break
   case 6:
