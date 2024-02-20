@@ -10,7 +10,8 @@ function converter() {
   var kel = (Number(n) + 273).toFixed(2);
   res.innerHTML = `Aqui estão as converções de ${n}°C celsius para: `;
 
-  conv.innerHTML = `<h2> ${kel} K (Kelvin)</h2>
+  conv.innerHTML = 
+  `<h2> ${kel} K (Kelvin)</h2>
   <h2>${faren} F (Fahrenheit)</h2>`;
  
 }
